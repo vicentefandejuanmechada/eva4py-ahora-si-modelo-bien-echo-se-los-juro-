@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>clientes</h1>
+    {% if cliente %}
+    <table class="default">
+      <tr>
+        <th>Rut</th>
+        <th>Numero cliente</th>
+        <th>Fecha ingreso</th>
+        <th>Apellido P</th>
+        <th>Apellido M</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>Fecha Nacimiento</th>
+      </tr>
+  
+      <!-- TODO: ARREGLAR TABLA -->
+      {% for cliente in cliente %}
+     
+      
+        <!-- <td>{{ clientes.rut }}</td> -->
+<!-- 
+        <p>{{ cliente.fecha_registro }}</p>
+        
+        <p>{{ cliente.apellido_p }}</p> -->
+        <tr>
+        <td></td>
+        <td>{{ cliente.numero_cliente }}</td>
+        <td>{{ cliente.fecha_nacimiento }}</td>
+        <td>{{ cliente.apellido_p }}</td> 
+        <td>{{ cliente.apellido_m }}</td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.correo }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.fecha_nacimiento }}</td> 
+                </tr>
+    
+ 
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>{{ error }}</p>
+    {% endif %}
+    
+ 
+</body>
